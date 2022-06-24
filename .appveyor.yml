@@ -1,6 +1,6 @@
 image: Ubuntu
 
-stack: jdk 1
+stack: jdk 11
 
 branches:
   only:
@@ -13,5 +13,5 @@ install:
 
 build_script:
   - chmod +x gradlew
-  - chmod +x geckodriver
+  - chmod +x geckodriver ./drivers/linux/geckodriver
   - ./gradlew test --info -Dselenide.headless=true
