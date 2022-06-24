@@ -22,11 +22,9 @@ public class CallbackTest {
 
     @BeforeEach
     public void setUp() {
-        FirefoxBinary firefoxBinary = new FirefoxBinary();
         FirefoxOptions options = new FirefoxOptions();
-        options.setBinary(firefoxBinary);
-        options.setHeadless(true);
-        driver = new FirefoxDriver();
+        options.addArguments("--headless");
+        driver = new FirefoxDriver(options);
     }
 
 
